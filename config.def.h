@@ -69,6 +69,7 @@ static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 static const char *screenshot[] = { "gnome-screenshot", NULL };
+static const char *poweroff[] = { "poweroff", NULL };
 
 
 static Key keys[] = {
@@ -117,6 +118,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,		XK_o, 	   spawn,	  {.v = poweroff } },
 };
 
 /* button definitions */
